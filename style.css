@@ -1,0 +1,398 @@
+@font-face {
+  font-family: 'Proxima';
+  src: url("src/ProximaNovaT-Thin.ttf");
+}
+@font-face {
+  font-family: 'Passion';
+  src: url("src/PassionTea.ttf");
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html{
+  height: 100%;
+  margin:0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+  overflow-x: hidden;
+}
+.portfolio-page, .about_me, .things_block, .footer{
+  position: relative;
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.portfolio-page{
+  min-height: 100vh;
+  width: 100%;
+  /*background-image: url("images/nick-morrison-325805.jpg");*/
+  background-image: url("images/greg-rakozy-129733.jpg");
+}
+
+/*Заголовки*/
+
+.title{
+  font-family: 'Passion', Montserrat, sans-serif;
+  font-size: 71px;
+  color: #000;
+  text-align: left;
+  padding-top: 25px;
+  width: 90%;
+  margin: 0 auto;
+}
+.center{
+  text-align: center;
+}
+.smaller{
+  font-size: 55px!important;
+  padding-top: 30px;
+}
+.small{
+  font-size: 40px!important;
+  font-family: 'Passion', Montserrat, sans-serif;
+  color: #000;
+  padding: 15px 0;
+}
+
+.portfolio-inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+.desc_img{
+  position: relative;
+  width: 275px;
+  height: 275px;
+  margin: 25px auto 0;
+  border-radius: 50%;
+  /*background-image: url(images/first.jpg);*/
+  background-image: url(images/photome.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.desc_img:hover{
+  background-image: url(images/DGDKhJNUQAAQggm.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.desc_img:hover img{
+  opacity: 1;
+}
+.desc_img img{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+.desc_img .third{
+  top: 5px;
+  left: 20px;
+}
+
+.greeting-text{
+  font-family: 'Proxima';
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  width: 75%;
+  margin: 0 auto;
+}
+.greeting-text p{
+  text-align: right!important;
+}
+.arrow-down{
+  text-align: center;
+  animation-name: fading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes fading {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+.arrow-down img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.portfolio-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.55;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+/*Градиент*/
+
+.gradient{
+    width:100%;
+    height:140px;
+    margin: 50px 0 0 0;
+    text-align: center;
+    background-color:#00c918;
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#00c918, endColorstr=#ebeb00);
+    background-image:-moz-linear-gradient(left, #00c918 26%, #ebeb00 47%,#f2320c 98%);
+    background-image:linear-gradient(left, #00c918 26%, #ebeb00 47%,#f2320c 98%);
+    background-image:-webkit-linear-gradient(left, #00c918 26%, #ebeb00 47%,#f2320c 98%);
+    background-image:-o-linear-gradient(left, #00c918 26%, #ebeb00 47%,#f2320c 98%);
+    background-image:-ms-linear-gradient(left, #00c918 26%, #ebeb00 47%,#f2320c 98%);
+    background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(26%,#00c918), color-stop(47%,#ebeb00),color-stop(98%,#f2320c));
+}
+.gradient img{
+  max-width: 15%;
+  height: 80%;
+  padding: 25px 4% 0;
+}
+.gradient img:last-of-type{
+  max-width: 20%;
+}
+
+/*Слайдер*/
+
+#carousel-example-generic{
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #fff;
+  border: none;
+  margin: 30px auto;
+}
+.carousel-inner{
+  width: 1050px!important;
+  margin: 0 auto;
+}
+.carousel-control{
+  width: 60px!important;
+  height: 60px;
+  top: 50%!important;
+}
+.carousel-control.left{
+	left:5%;
+}
+.carousel-control.right{
+	right:5%!important;
+}
+.carousel-control.left, .carousel-control.right{
+    background: none !important;
+    /*filter: progid:none !important;*/
+    opacity: 1!important;
+    margin: 0!important;
+    padding: 0;
+}
+.item{
+    text-align: center;
+    width: 100%!important;
+    margin: 0 auto;
+}
+.iframish{
+  background-image: url(images/ang4.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+.linker{
+  height: 500px;
+}
+iframe, .iframish{
+  width: 1050px;
+  height: 500px;
+  border: none;
+  opacity: 0.5;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+.item-name{
+  position: absolute;
+  top: 40%;
+  left: 34%;
+  background-color: #fff;
+  padding: 15px;
+  font-family: 'Proxima';
+  font-size: 30px;
+  color: #000;
+  /*margin: 0 auto;*/
+  border-radius: 25px;
+  border: 2px solid #009bc2;
+  opacity: 1;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+iframe:hover, .iframish:hover{
+  opacity: 1;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+.opacity-trick:hover .item-name{
+  opacity: 0!important;
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -ms-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+  display: none;
+}
+
+/*Цитаты*/
+
+.quotes{
+  background-color: #c5f4ff;
+  font-family: 'Proxima';
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.2;
+  padding: 30px;
+  margin: 30px 0;
+}
+/*Случайные факты*/
+
+.flip-cards{
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.flip-cards .line{
+  margin: 0 auto;
+  text-align: center;
+}
+.card{
+  margin: 15px;
+  display: inline-block;
+  perspective: 600px;
+}
+.card-box{
+  position: relative;
+  width: 240px;
+  height: 220px;
+  background: #fff;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: .5s ease;
+  box-shadow: 0 20px 20px #b8baff;
+}
+.front , .back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 220px;
+  color: #000;
+  backface-visibility: hidden;
+}
+.card:hover .card-box{
+  transform: rotateY(180deg);
+}
+.front img{
+  margin: 0 auto;
+  width: 40px;
+  padding-top: 85px;
+}
+.back{
+  transform: rotateY(180deg);
+  padding: 55px 10px 0;
+  font-family: 'Proxima';
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  background-color: #c5f4ff;
+  border-radius: 10px;
+}
+.back span{
+  text-decoration: line-through;
+}
+.back a, .back a:visited, .back a:hover, .back a:active{
+  text-decoration: none;
+  font-size: 1.3em;
+  color: blue;
+}
+
+/*Футер*/
+
+.footer{
+  position: relative;
+  height: 200px;
+  /*background-color: #2dbdbd;*/
+  background-image: url(images/pexels-photo-373076.jpeg);
+  background-position: center!important;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer-layout{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #34a5c1;
+  opacity: 0.5;
+  z-index: 1;
+}
+.footer-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.footer-content > div{
+  float: left;
+  width: 50%;
+  padding-left: 5%;
+}
+.footer-content::after{
+  content: '';
+  clear: both;
+  display: block;
+}
+.information{
+  font-family: 'Proxima';
+  color: #000;
+  font-size: 24px;
+}
+.social-links img{
+  width: 70px;
+  padding: 10px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px)  {
+  .desc_img{
+    margin-top: 5%;
+  }
+  .carousel-control.left{
+  	left:3%;
+  }
+  .carousel-control.right{
+  	right:3%!important;
+  }
+
+}
+@media screen and (min-width: 1536px)  {
+  .desc_img{
+    margin-top: 10%;
+  }
+
+}
